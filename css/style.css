@@ -1016,6 +1016,12 @@ nav ul li ul li a:hover {
 
     .page-end-support {
         flex-direction: column;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    .page-end-support p {
+        margin-bottom: 0;
     }
 }
 
