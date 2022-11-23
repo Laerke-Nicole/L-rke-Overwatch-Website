@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Overwatch</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+  
+
+<!--navigationbar-->
+<header>
+  <!--insert hamburger-->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+  </label>
+
+  <!--nav-->
+  <nav>
+    <!--left logo side nav-->
+    <div class="logo"><a href="#">
+      <img src="img/Overwatch-logo.png" height="45px" alt="logo">
+    </a></div>
+
+    <!--center nav-->
+    <ul>
+      <li><a href="#news" style="text-decoration: none;">News</a></li>
+      <li><a href="#game-info" style="text-decoration: none;">Game Info</a></li>
+      <li><a href="#heroes" style="text-decoration: none;">Heroes &#xFFEC;</a>
+        <ul class="hero-drop-down">
+          <li><a href="">Tank</a></li>
+          <li><a href="">Damage</a></li>
+          <li><a href="">Support</a></li>
+        </ul>
+      </li>
+      <li><a href="#support" style="text-decoration: none;">Support</a></li>
+      <li><a href="#social" style="text-decoration: none;">Social &#xFFEC;</a>
+        <ul class="social-drop-down">
+          <li><a href="https://discord.com/invite/overwatch" target="_blank">Discord</a></li>
+          <li><a href="https://www.facebook.com/OverwatchEU/?brand_redir=292929874198161" target="_blank">Facebook</a></li>
+          <li><a href="https://www.instagram.com/playoverwatch/?hl=da" target="_blank">Instagram</a></li>
+          <li><a href="https://twitter.com/playoverwatch" target="_blank">Twitter</a></li>
+          <li><a href="https://www.youtube.com/c/playoverwatch" target="_blank">Youtube</a></li>
+        </ul>
+      </li>
+      <li><a href="#e-sports" style="text-decoration: none;">E-Sports</a></li>
+    </ul>
+
+    <!--Right side nav-->
+    <ul>
+        <li class="account">
+          <a href="#account" style="text-decoration: none;">Account &#xFFEC;</a>
+          <ul class="account-drop-down">
+            <li>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-lg btn-block log-in" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Log In
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Log In</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="form-floating mb-3">
+                        <input type="email" class="form-control shadow-none" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                      </div>
+                      <div class="form-floating">
+                        <input type="password" class="form-control shadow-none" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn close" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn arrow"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!--dropdown of account-->
+            <li><a href="">Sign Up</a></li>
+          </ul>   
+        </li>  
+        
+        <!--play now buttton-->
+        <li class="play-now"><a href="#play-now" style="text-decoration: none;">PLAY NOW</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<!--front page-->
+<div class="front-page">
+  <div class="front-page">
+
+    <!--front page video-->
+    <video autoplay loop muted plays-inline class="front-page-vid">
+      <source src="vid/Overwatch.mp4" type="video/mp4">
+    </video>
+
+    <!--front page text-->
+    <div class="front-page-text">
+      <h1>
+        OVERWATCH
+      </h1>
+      <p id="front-page-free-to-play">
+        Free to play
+      </p>
+
+      <!--front page button-->
+      <div class="front-page-play-now">
+        <a href="">PLAY NOW</a>
+      </div>
+    </div>
+  </div>  
+</div>
+
+
+<!--Platforms-->
+<div class="platforms">
+  <div class="xbox">
+    <div class="xbox-img">
+    <img src="img/xbox.png" height="100px" alt="">
+    </div>
+  </div>
+  <div class="ps">
+    <img src="img/ps.png" height="100px" alt="">
+  </div>
+  <div class="nintendo">
+    <img src="img/nintendo.png" height="100px" alt="">
+  </div>
+  <div class="battlenet">
+    <img src="img/battlenet.png" height="100px" alt="">
+  </div>
+</div>
+
+    
+<!--latest news-->
+<div id="news" class="latest-news">
+  <h1>Latest news</h1>
+</div>
+
+<!--carousel-->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner news-titles">
+
+    <!--first carousel-->
+    <div class="carousel-item active">
+      <img src="img/latest-news-1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>New hero coming soon!</h5>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <div class="ln-p">15-10-22</div>
+      </div>
+    </div>
+
+    <!--second carousel-->
+    <div class="carousel-item">
+      <img src="img/latest-news-2.png" class="d-block w-100 h-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Halloween event</h5>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <div class="ln-p">20-10-22</div>
+      </div>
+    </div>
+
+    <!--third carousel-->
+    <div class="carousel-item">
+      <img src="img/latest-news-3.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Patch notes 1.7.20</h5>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <div class="ln-p">31-10-22</div>
+      </div>
+    </div>
+  </div>
+
+  <!--arrow slider-->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<!--Welcome to Overwatch-->
+<div id="game-info" class="container-fluid background1">
+  <div class="row background11">
+
+    <!--left welcome-->
+    <div class="col-4 left-welcome">
+      <h1>Welcome to <br>OVERWATCH</h1>
+      <div class="welcome-img">
+        <div class="friends">
+          <img src="img/friends-img.png" height="30px" alt="">
+          <p>Compete together with friends</p>
+        </div>
+        <div class="gamemodes">
+          <img src="img/scull-img.png" height="30px" alt="">
+          <p>Play our 8 action gamemodes</p>
+        </div>
+        <div class="maps">
+          <img src="img/map-img.png" height="30px" alt="">
+          <p>Maps inspired by places you know</p>
+        </div>
+      </div>
+
+      <!--Collapse knap til media queries-->
+      <div class="collapse-button">
+        <p>
+          <a class="btn" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><img src="img/friends-img.png" height="20px" alt=""></a>
+          <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2"><img src="img/scull-img.png" height="20px" alt=""></button>
+          <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3"><img src="img/map-img.png" height="20px" alt=""></button>
+        </p>
+        <div class="row">
+          <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+              <div class="card card-body friend">
+                Friends lorem ipsum 
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample2">
+              <div class="card card-body gamemode">
+                Gamemodes lorem ipsum 
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample3">
+              <div class="card card-body map">
+                Maps lorem ipsum 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--learn more button-->
+      <div class="learn-more1"><a href="" style="text-decoration: none;">LEARN MORE</a></div>
+    </div>
+
+    <!--img for welcome-->
+    <div class="col-8 right-welcome"></div>
+  </div>
+</div>
+
+
+<!--Choose your hero-->
+<div id="heroes" class="container-fluid background2">
+  <div class="row choose-hero">
+
+    <!--left side of choose hero with three cards-->
+    <div class="col-8 left-hero">
+      <a href="" style="text-decoration: none;"><div class="card">
+        <img src="img/wrecking ball.png" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Tank</h5>
+          <p class="card-text">Protect your teammates</p>
+        </div>
+      </div></a>
+
+      <a href="" style="text-decoration: none;"><div class="card">
+        <img src="img/genji.png" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Damage</h5>
+          <p class="card-text">Deal damage to enemies</p>
+        </div>
+      </div></a>
+
+      <a href="" style="text-decoration: none;"><div class="card mercy">
+        <img src="img/mercy.png" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Support</h5>
+          <p class="card-text">Heal and help your teammates</p>
+        </div>
+      </div></a>
+    </div>
+
+    <!--right side of choose hero-->
+    <div class="col-4 right-hero">
+      <h1>Choose your<br>HERO</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia facilis suscipit, sint vero aliquid consectetur sit.</p>
+      <div class="view-hero"><a href="" style="text-decoration: none;">VIEW ALL HEROES</a></div>
+    </div>
+  </div>
+</div>
+
+
+<!--Fullpage end-->
+<div class="full-page-end">
+
+  <!--img with text on top-->
+  <div class="full-page-end-img">
+    <div class="full-page-end-content">
+      <div class="full-page-end-text">
+        THE FUTURE IS WORTH<br>FIGHTING FOR. JOIN US!
+      </div>
+
+      <!--play now button-->
+      <div class="full-page-end-button"><a href="">PLAY NOW</a></div>
+    </div>
+  </div>
+</div>
+
+
+<!--Endpage-->
+<div class="container-fluid page-end">
+  <div class="row">
+    <div class="col page-end-socials-follow-us"><h2>Follow us</h2></div>
+  </div>
+
+  <!--socials logo-->
+  <div class="row">
+    <div class="col page-end-socials">
+      <a href="https://discord.com/invite/overwatch" target="_blank"><img src="img/discord.png" height="45px" alt=""></a>
+      <a href="https://www.facebook.com/OverwatchEU/?brand_redir=292929874198161" target="_blank"><img src="img/facebook.png" height="45px" alt=""></a>
+      <a href="https://www.instagram.com/playoverwatch/?hl=da" target="_blank"><img src="img/instagram.png" height="45px" alt=""></a>
+      <a href="https://twitter.com/playoverwatch" target="_blank"><img src="img/twitter.png" height="45px" alt=""></a>
+      <a href="https://www.youtube.com/c/playoverwatch" target="_blank"><img src="img/youtube.png" height="45px" width="50px" alt=""></a>
+    </div>
+
+    <!--logo-->
+    <div class="row">
+      <div class="col page-end-logo">
+        <a href=""><img src="img/Overwatch-logo.png" height="70px" alt=""></a>
+      </div>
+    </div>
+  </div>
+
+  <!--support-->
+  <div class="row">
+    <div class="col page-end-support">
+      <a href="" style="text-decoration: none;"><p>Terms of Use</p></a>
+      <a href="" style="text-decoration: none;"><p>Privacy Policy</p></a>
+      <a href="" style="text-decoration: none;"><p>Company Information</p></a>
+      <a href="" style="text-decoration: none;"><p>Cookie Settings</p></a>
+      <a href="" style="text-decoration: none;"><p>Contact Us</p></a>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

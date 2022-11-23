@@ -1,0 +1,1161 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+
+/*
+font-family: 'Orbitron', sans-serif - er for "Overwatch"
+font-family: 'Changa', sans-serif - er for overskrifter
+font-family: 'Titillium Web', sans-serif - er for brødtekst
+font-family: 'Coda' - er for knapper
+*/
+
+/*make scrolling from nav smooth*/
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding, 110px);
+}
+
+/*color swatches for my color palette*/
+:root {
+    --whitebackgroundcolor: #dddddd;
+    --whitehovercolor: #d4d4d4;
+    --buttoncolor: #ef7d1a;
+    --butttonhovercolor: #d96c0d;
+    --lightbluecolor: #81C7F0;
+    --lightbluehovercolor: #5c95b3;
+    --darkbluecolor: #2F798A;
+    --darkbluehovercolor: #285a65;
+    --lightheadlinecolor: #F9F9F9;
+    --lighttextcolor: #FFF0F0;
+    --darkheadlinecolor: #333333;
+    --darktextcolor: #444444;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #d5d5d5;
+    height: 100vh;
+    box-sizing: border-box;
+    position: static;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: 'Changa', sans-serif;
+}
+
+
+/*add general font family and color to text*/
+h1 {
+    font-family: 'Changa', sans-serif;
+}
+
+h5 {
+    font-family: 'Changa', sans-serif;
+    color: var(--darkheadlinecolor);
+}
+
+p {
+    font-family: 'Titillium Web', sans-serif;
+    color: var(--darktextcolor);
+}
+
+
+/*navigation bar*/
+
+/*make checkbox not display - for later purpose with hamburger menu*/
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+}
+
+/*nav*/
+nav {
+    background-color: var(--whitebackgroundcolor);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    text-decoration: none;
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+    padding: 18px 0 18px 0;
+}
+
+.logo {
+    margin-left: 40px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    text-align: center; 
+}
+
+nav ul li a {
+    padding: 10px 30px;
+    font-size: 22px;
+    color: var(--darkheadlinecolor);
+    display: inline-block;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--whitehovercolor);
+    color: var(--darkheadlinecolor);
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+/*dropdown*/
+nav ul li ul {
+    background-color: var(--whitebackgroundcolor);
+    display: none;
+    min-width: 100px;
+    position: absolute;
+    padding-top: 18px;
+}
+
+nav ul li ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-bottom: 3px solid var(--whitebackgroundcolor);
+    transition: 0s;
+}
+
+nav ul li ul li a:hover {
+    background-color: var(--whitehovercolor);
+    display: block;
+    border-bottom: 3px solid var(--buttoncolor);
+}
+
+/*placement of dropdown*/
+.hero-drop-down {
+    margin: 0 0 0 2px;
+}
+
+.social-drop-down {
+    margin: 0 0 0 -11px;
+}
+
+.account-drop-down {
+    margin: 0 0 0 5px;
+}
+
+/*design of dropdown on right side of nav*/
+.log-in {
+    color: var(--darkheadlinecolor);
+    font-size: 22px;
+    padding: 15px 40px 15px 40px;
+    border-bottom: 3px solid var(--whitebackgroundcolor);
+    border-radius: 0%;
+}
+
+.log-in:hover {
+    background-color: var(--whitehovercolor);
+    padding: 15px 40px 15px 40px;
+    border-bottom: 3px solid var(--buttoncolor);
+    border-radius: 0%;
+}
+
+/*styling the logging in for users account*/
+.form-floating:focus {
+    outline: none;
+}
+
+.modal-footer .close {
+    background-color: var(--whitebackgroundcolor);
+    border-radius: 0%;
+}
+
+.modal-footer .close:hover {
+    background-color: var(--whitehovercolor);
+    transition: 0.3s;
+}
+
+.modal-footer .arrow {
+    background-color: var(--lightbluecolor);
+    color: var(--darkheadlinecolor);
+    border-radius: 0%;
+}
+
+.modal-footer .arrow:hover {
+    background-color: var(--lightbluehovercolor);
+    color: var(--lightheadlinecolor);
+    transition: 0.3s;
+}
+
+/*play now button*/
+.play-now {
+    margin-right: 40px;
+    transition: 0.3s;
+}
+
+.play-now a {
+    background-color: var(--buttoncolor);
+    color: var(--lightheadlinecolor);
+    font-size: 22px;
+    font-family: 'Coda';
+    border-radius: 20px 0px;
+    transition: 0.3s;
+}
+
+.play-now a:hover {
+    background-color: var(--butttonhovercolor);
+    color: var(--lightheadlinecolor);
+    border-radius: 0%;
+}
+/*nav end*/
+
+
+/*front-page*/
+.front-page-vid {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/*text + button in front of vid*/
+.front-page-text h1 {
+    text-align: center;
+    padding-top: 350px;
+    color: var(--lightheadlinecolor);
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 4px 10px #000000;
+    font-size: 65px;
+    font-weight: bold;
+}
+
+#front-page-free-to-play {
+    color: var(--lighttextcolor);
+    font-size: 35px;
+    text-align: center;
+    text-shadow: 0 4px 10px #000000;
+    font-family: 'Changa', sans-serif;
+}
+
+.front-page-play-now {
+    text-align: center;
+    padding-top: 35px;
+    transition: 0.3s;
+}
+
+.front-page-play-now a {
+    color: var(--lightheadlinecolor);
+    font-family: 'Coda';
+    text-decoration: none;
+    background-color: var(--buttoncolor);
+    padding: 20px 40px;
+    font-size: 25px;
+    border-radius: 20px 0px;
+    transition: 0.3s;
+}
+
+.front-page-play-now a:hover {
+    background-color: var(--butttonhovercolor);
+    color: var(--lightheadlinecolor);
+    border-bottom: 0;
+    border-radius: 0%;
+}
+/*front-page end*/
+
+
+/*platforms*/
+.platforms {
+    margin-top: 335px;
+    background-color: var(--darkbluecolor);
+    display: flex;
+    justify-content: center;
+    column-gap: 100px;
+}
+/*platforms end*/
+
+
+/*latest news*/
+.latest-news {
+    margin-top: 50px;
+    padding: 20px 0 20px 0;
+    text-align: center;
+}
+
+.latest-news h1 {
+    color: var(--darkheadlinecolor);
+    margin-bottom: 0;
+}
+
+/*latest news carousel*/
+#carouselExampleCaptions h5 {
+    color: var(--lightheadlinecolor);
+    text-shadow: 0 4px 10px #000000;
+    font-size: 35px;
+}
+
+#carouselExampleCaptions p {
+    color: var(--lighttextcolor);
+    text-shadow: 0 4px 10px #000000;
+    font-size: 18px;
+}
+
+.ln-p {
+    color: var(--lighttextcolor);
+    text-shadow: 0 4px 10px #000000;
+    font-size: 16px;
+}
+/*latest news end*/
+
+
+/*Welcome to Overwatch*/
+.background1 {
+    margin-top: 70px;
+    width: 100%;
+    height: 658px;
+    background-color: var(--lightbluecolor);
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+    z-index: -2;
+}
+
+/*left side*/
+.left-welcome {
+    padding-left: 150px;
+    padding-right: 0;
+}
+
+.left-welcome h1 {
+    color: var(--darkheadlinecolor);
+    margin-top: 60px;
+    margin-bottom: 15px;
+    font-size: 65px;
+}
+
+.left-welcome p {
+    font-size: 18px;
+}
+
+.friends, .gamemodes, .maps {
+    display: flex;
+}
+
+.collapse-button {
+    display: none;
+}
+
+/*learn more button*/
+.learn-more1 {
+    padding-top: 70px;
+    transition: 0.3s;
+}
+
+.learn-more1 a {
+    background-color: var(--buttoncolor);
+    color: var(--lightheadlinecolor);
+    font-size: 22px;
+    padding: 15px 25px;
+    font-family: 'Coda';
+    border-radius: 20px 0px;
+    transition: 0.3s;
+}
+
+.learn-more1 a:hover {
+    background-color: var(--butttonhovercolor);
+    border-radius: 0%;
+}
+
+/*right side*/
+.right-welcome {
+    background-image: url(../img/welcome-img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+    height: 600px;
+    margin-top: 58px;
+    padding-right: 0;
+    padding-left: 0;
+}
+/*Welcome to Overwatch end*/
+
+
+/*Choose your hero*/
+.background2 {
+    margin-top: 70px;
+    background-color: var(--lightbluecolor);
+    clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: -2;
+    width: 100%;
+    height: 658px;
+}
+
+/*left side with cards*/
+.choose-hero .left-hero {
+    display: flex;
+    gap: 18px;
+    padding-right: 0;
+    padding-left: 150px;
+    margin-top: 198px;
+    margin-bottom: 53px;
+}
+
+.mercy {
+    padding-left: 16px;
+}
+
+.mercy .card-body {
+    padding-left: 0;
+}
+
+/*right side of choose your hero*/
+.right-hero {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.right-hero h1 {
+    color: var(--darkheadlinecolor);
+    margin-top: 60px;
+    margin-bottom: 15px;
+    font-size: 65px;
+}
+
+.right-hero p {
+    font-size: 18px;
+    width: min(90%, 350px);
+}
+
+/*view hero button*/
+.view-hero {
+    margin-top: 64px;
+    padding: 25px 0 25px 0;
+    transition: 0.3s;
+}
+
+.view-hero a {
+    background-color: var(--buttoncolor);
+    color: var(--lightheadlinecolor);
+    font-size: 22px;
+    padding: 15px 25px;
+    font-family: 'Coda';
+    border-radius: 20px 0px;
+    transition: 0.3s;
+}
+
+.view-hero a:hover {
+    background-color: var(--butttonhovercolor);
+    border-radius: 0%;
+}
+/*Choose your Hero end*/
+
+
+/*Full page*/
+.full-page-end-img {
+    background-image: url(../img/overwatch-full-page.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 100vh;
+    height: 720px;
+    width: 100%;
+}
+
+/*text in front of img*/
+.full-page-end-text {
+    color: var(--lightheadlinecolor);
+    font-weight: 700;
+    text-align: center;
+    font-size: 60px;
+    padding-top: 225px;
+    text-shadow: 0 4px 10px #000000;
+}
+
+/*full page end button*/
+.full-page-end-button {
+    text-align: center;
+    margin-top: 40px;
+    transition: 0.3s;
+}
+
+.full-page-end-button a {
+    color: var(--lightheadlinecolor);
+    font-family: 'Coda';
+    text-decoration: none;
+    background-color: var(--buttoncolor);
+    padding: 15px 25px;
+    font-size: 22px;
+    border-radius: 20px 0px;
+    transition: 0.3s;
+}
+
+.full-page-end-button a:hover {
+    background-color: var(--butttonhovercolor);
+    color: var(--lightheadlinecolor);
+    border-bottom: 0;
+    border-radius: 0%;
+}
+/*full page end*/
+
+
+/*page-end*/
+.page-end {
+    background: rgb(104,156,168);
+    background: radial-gradient(circle, rgba(104,156,168,1) 0%, rgba(69,128,142,1) 35%, rgba(47,121,138,1) 100%);
+}
+
+/*page end text*/
+.page-end-socials-follow-us h2 {
+    text-align: center;
+    padding-top: 20px;
+    color: var(--lightheadlinecolor);
+    font-family: 'Changa', sans-serif;
+}
+
+/*social media icon*/
+.page-end-socials {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    gap: 12px;
+    transition: 0.3s;
+}
+
+.page-end-socials a {
+    transition: 0.3s;
+}
+
+.page-end-socials a:hover {
+    transform: scale(1.2);
+}
+
+/*page end logo*/
+.page-end-logo {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+/*page end support*/
+.page-end-support {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    transition: 0.3s;
+}
+
+.page-end-support p {
+    color: var(--lighttextcolor);
+    font-size: 17px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.page-end-support p:hover {
+    background-color: var(--darkbluehovercolor);
+    padding: 10px;
+}
+/*page-end end*/
+
+
+/*media-queries*/
+@media (min-aspect-ratio: 16/9) {
+    .front-page-vid {
+        width: 100%;
+        height: auto;
+    }
+
+    .right-hero {
+        padding-left: 70px;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .front-page-vid {
+        width: auto;
+        height: 100%; 
+    }
+
+    .right-hero {
+        padding-left: 70px;
+    }
+}
+
+@media only screen and (max-width: 1460px) {
+    .left-welcome h1 {
+        font-size: 55px;
+    }
+}
+
+@media only screen and (max-width: 1310px) {
+    nav ul li a {
+        padding: 10px 20px;
+    }
+
+    .front-page-play-now a {
+        padding: 15px 35px;
+        font-size: 22px;
+    }
+
+    .left-welcome {
+        padding-left: 100px;
+    }
+
+    .left-welcome h1 {
+        font-size: 45px;
+    }
+
+    .left-welcome p {
+        font-size: 18px;
+    }
+
+    .right-welcome {
+        height: 500px;
+        margin-top: 40px;
+    }
+
+    .learn-more1 {
+        padding-top: 50px;
+    }
+
+    .learn-more1 a {
+        font-size: 18px;
+    }
+
+    .choose-hero .left-hero {
+        padding-left: 100px;
+    }
+
+    .right-hero {
+        padding-left: 50px;
+    }
+
+    .right-hero h1 {
+        font-size: 45px;
+    }
+
+    .right-hero p {
+        font-size: 18px;
+    }
+
+    .view-hero {
+        margin-top: 105px;
+    }
+
+    .view-hero a {
+        font-size: 18px;
+    }
+
+    .full-page-end-button a {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 1210px) {
+    nav ul li a {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        margin-left: 20px;
+    }
+
+    .play-now {
+        margin-right: 20px;
+    }
+
+    .left-welcome p {
+        font-size: 18px;
+    }
+
+    .learn-more1 {
+        padding-top: 40px;
+    }
+
+    .right-hero p {
+        font-size: 18px;
+    }    
+
+    .view-hero {
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .platforms {
+        gap: 30px;
+    }
+
+    .right-welcome {
+        margin-top: 50px;
+        height: 450px;
+    }
+
+    .left-welcome h1 {
+        margin-bottom: 5px;
+    }
+
+    .learn-more1 {
+        padding-top: 15px;
+    }
+
+    .view-hero {
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .left-welcome {
+        padding-left: 75px;
+    }
+
+    .choose-hero .left-hero {
+        padding-left: 75px;
+    }
+
+    .right-hero {
+        padding-left: 37.5px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    header {
+        position: fixed;
+        z-index: 1001;
+        width: 100%;
+        background-color: var(--whitebackgroundcolor);
+    }
+
+    nav {
+        position: absolute;
+        display: block;
+        top: 100%;
+    }
+
+    nav ul {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        background-color: var(--whitebackgroundcolor);
+        width: 30%;
+        right: 0;
+        top: 100%;
+    }
+
+    nav ul li a{
+        display: block;
+        border-bottom: 3px solid var(--whitebackgroundcolor);
+    }
+
+    nav ul li a:hover {
+        border-bottom: 3px solid var(--buttoncolor);
+    }
+
+    nav ul li a:hover ~ nav ul li ul {
+        display: block;
+    }
+
+    nav ul li ul {
+        display: block;
+    }
+
+    nav ul li ul li{
+        display: none;
+    }
+
+    .hero-drop-down {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .social-drop-down {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .account-drop-down {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-toggle {
+        position: absolute;
+        display: none;
+        z-index: 10002;
+        top: 20px;
+        right: 0;
+    }
+
+    .nav-toggle-label {
+        position: absolute;
+        display: block;
+        z-index: 10002;
+        top: 35px;
+        right: 0;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    .nav-toggle-label span, 
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        position: relative;
+        display: block;
+        background: var(--darkbluehovercolor);
+        height: 3px;
+        width: 40px;
+        border-radius: 2px;
+    }
+
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        content: '';
+        position: absolute;
+    }
+
+    .nav-toggle-label span::before {
+        bottom: 8px;
+    }
+
+    .nav-toggle-label span::after {
+        top: 7px;
+    }
+
+    .nav-toggle:checked ~ nav ul {
+        display: block;
+    }
+
+    .play-now {
+        display: none;
+    }
+
+    .left-welcome {
+        padding-left: 50px;
+    }
+
+    .left-welcome h1 {
+        margin-top: 35px;
+        font-size: 35px;
+    }
+
+    .left-welcome p {
+        margin-bottom: 10px;
+    }
+
+    .right-welcome {
+        height: 400px;
+        margin-top: 40px;
+    }
+
+    .learn-more1 {
+        padding-top: 15px;
+    }
+
+    .learn-more1 a {
+        padding: 10px 20px;
+    }
+
+    .right-hero h1 {
+        margin-top: 35px;
+        margin-bottom: 5px;
+        font-size: 35px;
+    }
+
+    .choose-hero .left-hero {
+        margin-top: 130px;
+        margin-bottom: 53px;
+        padding-left: 50px;
+    }
+
+    .right-hero {
+        padding-left: 50px;
+    }
+
+    .view-hero {
+        margin-top: 70px;
+    }
+
+    .view-hero a {
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 910px) {
+    .left-welcome p {
+        font-size: 16px;
+    }
+
+    .choose-hero p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .platforms {
+        gap: 30px;
+    }
+
+    .right-welcome {
+        height: 380px;
+        margin-top: 40px;
+    }
+
+    .view-hero {
+        margin-top: 55px;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .platforms {
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 0 120px;
+    }
+
+    #carouselExampleCaptions h5 {
+        font-size: 26px;
+    }
+    
+    #carouselExampleCaptions p {
+        font-size: 16px;
+    }
+
+    .left-welcome h1 {
+        font-size: 30px;
+    }
+
+    .learn-more1 a {
+        font-size: 16px;
+    }
+
+    .right-hero h1 {
+        font-size: 30px;
+    }
+
+    .view-hero a {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .left-welcome h1 {
+        margin-top: 25px;
+        font-size: 28px;
+    }
+
+    .left-welcome p {
+        font-size: 14px;
+    }
+
+    .right-welcome {
+        height: 350px;
+        margin-top: 15px;
+    }
+
+    .learn-more1 {
+        padding-top: 10px;  
+    }
+
+    .choose-hero .left-hero {
+        margin-top: 115px;
+        margin-bottom: 40px;
+        padding-left: 30px;
+        gap: 12px;
+    }
+
+    .choose-hero .left-hero h5 {
+        font-size: 18px;
+    }
+
+    .choose-hero .left-hero p {
+        font-size: 14px;
+    }
+
+    .right-hero {
+        padding-left: 30px;
+    }
+
+    .right-hero h1 {
+        margin-top: 40px;
+        font-size: 28px;
+    }
+
+    .right-hero p {
+        font-size: 14px;
+    }
+
+    .view-hero {
+        margin-top: 55px;
+    }
+
+    .full-page-end-text {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .right-welcome {
+        margin-top: 30px;
+    }
+
+    .page-end-support {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .front-page h1 {
+        margin-bottom: 0;
+        font-size: 45px;
+    }
+
+    #front-page-free-to-play {
+        flex-direction: row;
+        font-size: 28px;
+    }
+
+    .front-page-play-now {
+        padding-top: 10px;
+    }
+
+    .front-page-play-now a {
+        font-size: 20px;
+    }
+
+    .platforms {
+        margin-top: 370px;
+    }
+
+    .latest-news h1 {
+        font-size: 28px;
+    } 
+
+    .left-welcome {
+        padding-left: 35px;
+    }
+
+    .left-welcome h1 {
+        margin-top: 25px;
+    }
+
+    .learn-more1 {
+        padding-top: 10px;
+    }
+
+    .full-page-end-text {
+        flex-direction: row;
+        padding-top: 200px;
+        font-size: 45px;
+    }
+
+    .full-page-end-button a {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    .left-welcome h1 {
+        margin-bottom: 0;
+    }
+
+    .friends, .gamemodes, .maps {
+        display: none;
+    }
+    
+    .collapse-button {
+        display: block;
+        gap: 8px;
+    }
+
+    .friend {
+        background-color: var(--whitebackgroundcolor);
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .gamemode {
+        background-color: var(--whitebackgroundcolor);
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .map {
+        background-color: var(--whitebackgroundcolor);
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .right-welcome {
+        height: 300px;
+        margin-top: 30px;
+    }
+
+    .learn-more1 {
+        padding-top: 0;
+    }
+
+    .learn-more1 a {
+        padding: 10px 10px;
+    }
+
+    .choose-hero .left-hero {
+        margin-top: 100px;
+        margin-bottom: 20px;
+    }
+
+    .view-hero {
+        margin-top: 80px;
+    }
+
+    .view-hero a {
+        padding: 10px 10px;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    nav ul {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .platforms {
+        flex-wrap: wrap;
+        gap: 0px;
+        padding: 0 150px;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    nav ul {
+        width: 60%;
+    }
+
+    .right-welcome {
+        height: 290px;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .full-page-end-text {
+        font-size: 40px;
+    }
+}
