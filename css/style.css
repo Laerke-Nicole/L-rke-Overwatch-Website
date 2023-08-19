@@ -107,7 +107,7 @@ nav ul {
 
 nav ul li a {
     padding: 10px 30px;
-    font-size: 22px;
+    font-size: 16px;
     color: var(--darkheadlinecolor);
     display: inline-block;
     transition: 0.3s;
@@ -161,7 +161,7 @@ nav ul li ul li a:hover {
 /*design of dropdown on right side of nav*/
 .log-in {
     color: var(--darkheadlinecolor);
-    font-size: 22px;
+    font-size: 16px;
     padding: 15px 40px 15px 40px;
     border-bottom: 3px solid var(--whitebackgroundcolor);
     border-radius: 0%;
@@ -210,7 +210,7 @@ nav ul li ul li a:hover {
 .play-now a {
     background-color: var(--buttoncolor);
     color: var(--lightheadlinecolor);
-    font-size: 22px;
+    font-size: 16px;
     font-family: 'Coda';
     border-radius: 20px 0px;
     transition: 0.3s;
@@ -225,30 +225,42 @@ nav ul li ul li a:hover {
 
 
 /*front-page*/
-.front-page-vid {
+/* .front-page-vid {
     position: absolute;
     right: 0;
     top: 0;
     width: 100%;
-    height: 100px;
     object-fit: cover;
     z-index: -1;
-}
+} */
+
+#background-video {
+    width: 100vw;
+    height: 90vh;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
 
 /*text + button in front of vid*/
 .front-page-text h1 {
+    margin-top: 30vh;
     text-align: center;
-    padding-top: 350px;
     color: var(--lightheadlinecolor);
     font-family: 'Orbitron', sans-serif;
     text-shadow: 0 4px 10px #000000;
-    font-size: 65px;
+    font-size: 64px;
     font-weight: bold;
 }
 
 #front-page-free-to-play {
     color: var(--lighttextcolor);
-    font-size: 35px;
+    font-size: 34px;
     text-align: center;
     text-shadow: 0 4px 10px #000000;
     font-family: 'Changa', sans-serif;
@@ -258,6 +270,7 @@ nav ul li ul li a:hover {
     text-align: center;
     padding-top: 35px;
     transition: 0.3s;
+    margin-bottom: 20vh;
 }
 
 .front-page-play-now a {
@@ -266,7 +279,7 @@ nav ul li ul li a:hover {
     text-decoration: none;
     background-color: var(--buttoncolor);
     padding: 20px 40px;
-    font-size: 25px;
+    font-size: 16px;
     border-radius: 20px 0px;
     transition: 0.3s;
 }
@@ -282,7 +295,6 @@ nav ul li ul li a:hover {
 
 /*platforms*/
 .platforms {
-    margin-top: 335px;
     background-color: var(--darkbluecolor);
     display: flex;
     justify-content: center;
@@ -293,9 +305,9 @@ nav ul li ul li a:hover {
 
 /*latest news*/
 .latest-news {
-    margin-top: 50px;
-    padding: 20px 0 20px 0;
+    padding: 70px 0 20px 0;
     text-align: center;
+    background-color: var(--whitebackgroundcolor);
 }
 
 .latest-news h1 {
@@ -307,13 +319,13 @@ nav ul li ul li a:hover {
 #carouselExampleCaptions h5 {
     color: var(--lightheadlinecolor);
     text-shadow: 0 4px 10px #000000;
-    font-size: 35px;
+    font-size: 34px;
 }
 
 #carouselExampleCaptions p {
     color: var(--lighttextcolor);
     text-shadow: 0 4px 10px #000000;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .ln-p {
@@ -348,7 +360,7 @@ nav ul li ul li a:hover {
 }
 
 .left-welcome p {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .friends, .gamemodes, .maps {
@@ -368,7 +380,7 @@ nav ul li ul li a:hover {
 .learn-more1 a {
     background-color: var(--buttoncolor);
     color: var(--lightheadlinecolor);
-    font-size: 22px;
+    font-size: 16px;
     padding: 15px 25px;
     font-family: 'Coda';
     border-radius: 20px 0px;
@@ -436,7 +448,7 @@ nav ul li ul li a:hover {
 }
 
 .right-hero p {
-    font-size: 18px;
+    font-size: 16px;
     width: min(90%, 350px);
 }
 
@@ -450,7 +462,7 @@ nav ul li ul li a:hover {
 .view-hero a {
     background-color: var(--buttoncolor);
     color: var(--lightheadlinecolor);
-    font-size: 22px;
+    font-size: 16px;
     padding: 15px 25px;
     font-family: 'Coda';
     border-radius: 20px 0px;
@@ -498,7 +510,7 @@ nav ul li ul li a:hover {
     text-decoration: none;
     background-color: var(--buttoncolor);
     padding: 15px 25px;
-    font-size: 22px;
+    font-size: 16px;
     border-radius: 20px 0px;
     transition: 0.3s;
 }
@@ -562,7 +574,7 @@ nav ul li ul li a:hover {
 
 .page-end-support p {
     color: var(--lighttextcolor);
-    font-size: 17px;
+    font-size: 16px;
     padding: 10px;
     transition: 0.3s;
 }
@@ -610,7 +622,6 @@ nav ul li ul li a:hover {
 
     .front-page-play-now a {
         padding: 15px 35px;
-        font-size: 22px;
     }
 
     .left-welcome {
@@ -621,10 +632,6 @@ nav ul li ul li a:hover {
         font-size: 45px;
     }
 
-    .left-welcome p {
-        font-size: 18px;
-    }
-
     .right-welcome {
         height: 500px;
         margin-top: 40px;
@@ -632,10 +639,6 @@ nav ul li ul li a:hover {
 
     .learn-more1 {
         padding-top: 50px;
-    }
-
-    .learn-more1 a {
-        font-size: 18px;
     }
 
     .choose-hero .left-hero {
@@ -650,20 +653,8 @@ nav ul li ul li a:hover {
         font-size: 45px;
     }
 
-    .right-hero p {
-        font-size: 18px;
-    }
-
     .view-hero {
         margin-top: 105px;
-    }
-
-    .view-hero a {
-        font-size: 18px;
-    }
-
-    .full-page-end-button a {
-        font-size: 18px;
     }
 }
 
@@ -680,17 +671,9 @@ nav ul li ul li a:hover {
         margin-right: 20px;
     }
 
-    .left-welcome p {
-        font-size: 18px;
-    }
-
     .learn-more1 {
         padding-top: 40px;
-    }
-
-    .right-hero p {
-        font-size: 18px;
-    }    
+    } 
 
     .view-hero {
         margin-top: 80px;
@@ -896,16 +879,6 @@ nav ul li ul li a:hover {
     }
 }
 
-@media only screen and (max-width: 910px) {
-    .left-welcome p {
-        font-size: 16px;
-    }
-
-    .choose-hero p {
-        font-size: 16px;
-    }
-}
-
 @media only screen and (max-width: 900px) {
     .platforms {
         gap: 30px;
@@ -931,25 +904,13 @@ nav ul li ul li a:hover {
     #carouselExampleCaptions h5 {
         font-size: 26px;
     }
-    
-    #carouselExampleCaptions p {
-        font-size: 16px;
-    }
 
     .left-welcome h1 {
         font-size: 30px;
     }
 
-    .learn-more1 a {
-        font-size: 16px;
-    }
-
     .right-hero h1 {
         font-size: 30px;
-    }
-
-    .view-hero a {
-        font-size: 16px;
     }
 }
 
@@ -977,10 +938,6 @@ nav ul li ul li a:hover {
         margin-bottom: 40px;
         padding-left: 30px;
         gap: 12px;
-    }
-
-    .choose-hero .left-hero h5 {
-        font-size: 18px;
     }
 
     .choose-hero .left-hero p {
@@ -1026,6 +983,12 @@ nav ul li ul li a:hover {
 }
 
 @media only screen and (max-width: 750px) {
+    #background-video { display: none; }
+    body {
+      background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
+      background-size: cover;
+    }
+
     .front-page h1 {
         margin-bottom: 0;
         font-size: 45px;
@@ -1042,10 +1005,6 @@ nav ul li ul li a:hover {
 
     .front-page-play-now a {
         font-size: 20px;
-    }
-
-    .platforms {
-        margin-top: 370px;
     }
 
     .latest-news h1 {
@@ -1072,7 +1031,6 @@ nav ul li ul li a:hover {
 
     .full-page-end-button a {
         padding: 10px 20px;
-        font-size: 16px;
     }
 }
 
